@@ -66,6 +66,3 @@ app.post("/", function (req, res) {
 app.listen(process.env.PORT || 3000, function () {
   console.log("Server is running on port 3000...");
 });
-
-//apiKEy =  b12515ae9b53ffd1daf955d962d38673-us14  //replace last num 14 with the X in the url endpoing
-// listId = fcec82a20f
