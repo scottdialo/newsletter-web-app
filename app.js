@@ -42,7 +42,7 @@ app.post("/", function (req, res) {
   const url = "https://us14.api.mailchimp.com/3.0/lists/fcec82a20f"; //endpoint to add subsriber to our mailchip account
   const options = {
     method: "POST",
-    //authentication, anyting as usrNmae and api key as pwrd
+    auth: "scottdialo:d2bbf8f9d56a047343d8fcc0a9a0d04f-us14", //authentication, anyting as usrNmae and api key as pwrd
   };
 
   const requestData = https.request(url, options, function (response) {
