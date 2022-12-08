@@ -10,7 +10,6 @@ app.use(express.static("public")); //this serve static files
 
 app.get("/", function (req, res) {
   res.sendFile(__dirname + "/index.html");
-  console.log(process.env.SECRET_KEY);
 });
 
 // failure post route
