@@ -10,7 +10,16 @@
   "license": "ISC",
   "dependencies": {
     "body-parser": "^1.20.0",
+    "dotenv": "^16.0.3",
     "express": "^4.18.1",
     "request": "^2.88.2"
-  }
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/scottdialo/newsletter-web-app.git"
+  },
+  "bugs": {
+    "url": "https://github.com/scottdialo/newsletter-web-app/issues"
+  },
+  "homepage": "https://github.com/scottdialo/newsletter-web-app#readme"
 }

@@ -1,8 +1,10 @@
+require("dotenv").config();
 const express = require("express");
 const bodyParser = require("body-parser");
 const request = require("request");
 const app = express();
 const https = require("https");
+
 app.use(bodyParser.urlencoded({ extended: true }));
 app.use(express.static("public")); //this serve static files
 
@@ -21,7 +23,7 @@ app.post("/", function (req, res) {
   var lastName = req.body.lastName;
   var email = req.body.email;
 
-  console.log(firstName);
+  //console.log(firstName);
 
   //Mailchimp email api implementation
   var data = {
@@ -42,7 +44,7 @@ app.post("/", function (req, res) {
   const url = "https://us14.api.mailchimp.com/3.0/lists/fcec82a20f"; //endpoint to add subsriber to our mailchip account
   const options = {
     method: "POST",
-    auth: "scottdialo:d2bbf8f9d56a047343d8fcc0a9a0d04f-us14", //authentication, anyting as usrNmae and api key as pwrd
+    auth: process.env.SECRET_KEY, //authentication, anyting as usrNmae and api key as pwrd
   };
 
   const requestData = https.request(url, options, function (response) {
